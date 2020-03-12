@@ -14,6 +14,17 @@ print(Style.NORMAL)
 
 img1= pyglet.image.load('Legacy/PNG/roadTile11.png')
 spr1 = pyglet.sprite.Sprite(img1, x = 0, y = 0)
+spr1 = []
+for i in range(14):
+  spr1.append(pyglet.sprite.Sprite(img, x = 64, j = 64))
+
+
+
+
+img2= pyglet.image.load('Legacy/PNG/roadTile13.png')
+spr2 = pyglet.sprite.Sprite(img2, x = 0, y = 64)
+
+
 
 
 img= pyglet.image.load('isometric_vehicles/white_vehicles.png')
@@ -38,7 +49,9 @@ def update(dt):
 def on_draw():
     win.clear()
     util.pixelScale()
+
     spr1.draw()
+    spr2.draw()
     spr.draw()
     
 
